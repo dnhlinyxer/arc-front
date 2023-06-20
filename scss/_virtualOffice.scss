@@ -1,0 +1,108 @@
+.viroffice{
+    padding: 100px 0;
+}
+.viroffice-container {
+    @include container;
+    @include pad {
+        padding: 0 1.5rem;
+    }
+    .viroffice-QA {
+        display: flex;
+        padding: 0 0 5rem 0;
+        border-bottom: 2px solid gray;
+        @include pad {
+            flex-direction: column;
+        }
+        img {
+            object-fit: contain;
+        }
+    }
+    .viroffice-situation {
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 2rem 0;
+            @include mobile-row {
+                font-size: 2rem;
+            }
+            @include mobile-col {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+.viroffice-QAtext {
+    // border: 1px solid black;
+    padding: 0 1rem;
+    @include pad {
+        padding: 0;
+    }
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: #fff;
+        background-color: #000;
+        padding: 1rem 0;
+        @include pad {
+            margin-top: 2rem;
+        }
+        @include mobile-row {
+            font-size: 2rem;
+        }
+        @include mobile-col {
+            font-size: 1.7rem;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        // border: 1px solid red;
+        padding: 1rem 1rem;
+        @include mobile-row {
+            font-size: 1.3rem;
+        }
+        // @include mobile-col {
+        //     font-size: 1.1rem;
+        // }
+    }
+}
+.situation-list {
+    display: flex;
+    justify-content: space-around;
+    @include mobile-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item {
+        width: 40%;
+        border: 2px solid #000;
+        @include pad {
+            width: 45%;
+        }
+        @include mobile-row {
+            width: 80%;
+            margin-bottom: 2rem;
+        }
+        @include mobile-col {
+            width: 90%;
+        }
+        h3 {
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            background-color: #000;
+            @include mobile-row {
+                font-size: 1.7rem;
+            }
+            @include mobile-col {
+                font-size: 1.5rem;
+            }
+        }
+        ul {
+            padding: 2rem 0 2rem 3rem;
+            li {
+                list-style-type: square;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

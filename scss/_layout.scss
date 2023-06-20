@@ -1,0 +1,271 @@
+/* layout start */ 
+.wrap {
+    line-height: 1.5;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* navbar start */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.88);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.8);
+}
+.nav-container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        a {
+            background-image: url(../img/logo_arc_sm_60x60.jpg);
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-left: 1rem;
+
+        }
+    }
+}
+.nav-menu {
+    display: flex;
+    margin-right: 1rem;
+    @include mobile-row {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        top: 60px;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.88);
+        // hamburger-menu
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 1s;
+    }
+    & > li {
+        text-align: center;
+        & > a {
+            display: block;
+            padding: 1.2rem 0.5rem;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.45rem;
+            font-weight: 700;
+            position: relative;
+            transform: translateY(0);
+            transition: .3s;
+            &:hover {
+                transform: translateY(-3px);
+                &::after {
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                bottom: 5px;
+                border-bottom: 5px solid #fff;
+                transition: .3s;
+            }
+            @include pad {
+                font-size: 1.2rem;
+            }
+            @include mobile-row {
+                padding: 0.8rem 0.5rem;
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+.nav-dropdown-ul {
+    width: max-content;
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.88);
+    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.8);
+    @include mobile-row {
+        width: 40%;
+        margin: 0 auto;
+    }
+    li {
+        text-align: left;
+        @include mobile-row {
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            display: block;
+            padding: 0.5rem 0.5rem;
+            font-size: 1rem;
+            font-weight: 300;
+            color: #fff;
+            border-bottom: 2px dotted #fff;
+            &:hover {
+                background-color: #fff;
+                color: rgba(0, 0, 0, 0.88);
+            }
+        }
+    }
+    @include mobile-row {
+        position: static;
+    }
+}
+.show-menu {
+    .nav-menu {
+        @include mobile-row {
+            max-height: 100vh;
+        }
+    }
+}
+.nav-icon {
+    display: flex;
+    padding: 0 0.5rem;
+    align-items: center;
+    @include mobile-row {
+        justify-content: space-around;
+        padding: 0.8rem 0.5rem;
+    }
+    li {
+        padding: 0 0.6rem;
+        a {
+            display: block;
+            color: #fff;
+            font-size: 1.45rem;
+            transition: .3s;
+            &:hover {
+                transform: scale(1.3, 1.3);
+            }
+        }
+    }
+}
+
+.hamburger-menu {
+    color: #fff;
+    // font-size: 1.2rem;
+    display: none;
+    @include mobile-row {
+        display: block;
+        padding: 0 1rem;
+        font-size: 1.8rem;
+    }
+}
+/* navbar end */
+
+/* footer start */
+.footer {
+    background-color: #000;
+    .footer-container {
+        @include container;
+        color: #fff;
+        padding: 60px 20px 15px;
+        @include mobile-col {
+            padding: 60px 25px 15px;
+        }
+    }
+}
+.footer-title {
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+.footer-text {
+    display: flex;
+    justify-content: space-between;
+    @include mobile-col {
+        flex-direction: column;
+    }
+    .footer-contact {
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        @include mobile-col {
+            padding: 0.7rem 0;
+        }
+    }
+    .footer-service {
+        display: flex;
+        width: 26%;
+        @include pad {
+            width: 30%;
+        }
+        @include mobile-row {
+            width: 35%;
+        }
+        @include mobile-col {
+            width: 100%;
+        }
+        ul {
+            width: 50%;
+            a {
+                text-decoration: none;
+                color: #fff;
+                font-size: 1rem;
+            }
+            li:hover a {
+                color: #fa0;
+            }
+        }
+    }
+}
+.footer-social-media {
+    a {
+        color: #fff;
+        font-size: 1.3rem;
+    }
+    @include mobile-col {
+        padding: 10px 0 0 0;
+    }
+}
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 30px 0 10px;
+}
+/* footer end */
+
+/* totop start */
+.totop {
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    bottom: 11%;
+    right: 2%;
+    z-index: 2;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgba(195, 190, 190, 0.6);
+    & a {
+        text-decoration: none;
+        & i {
+            color: rgb(242, 236, 236);
+            font-size: 25px;
+        }
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(242, 236, 236, 0.7);
+        & i {
+            color: rgba(0, 0, 0, 0.7);
+        }
+    }
+}
+/* totop end */
+
+/* layout end */
