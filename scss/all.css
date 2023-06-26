@@ -620,7 +620,7 @@ img {
 .pricing .pricing-container tbody tr:nth-child(even) {
   background-color: #cdcccc;
 }
-.pricing .pricing-container tbody tr td:nth-child(3) {
+.pricing .pricing-container tbody tr td:nth-child(2) {
   color: red;
 }
 .pricing .pricing-container tbody tr:hover {
