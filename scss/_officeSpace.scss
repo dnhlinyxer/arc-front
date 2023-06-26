@@ -1,0 +1,70 @@
+.office-space {
+    padding: 100px 0;
+    background-image: url(../img/free-space3-opacity25.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.office-container {
+    @include container;
+    @include pad {
+        padding: 0 1.5rem;
+    }
+}
+.office-sumup {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 7px solid #000;
+    padding: 0.5rem 1rem;
+    margin-bottom: 2rem;
+    @include mobile-row {
+        font-size: 1.3rem;
+    }
+}
+.office-list .office-item:nth-child(even) {
+    img {
+        order: 1;
+        @include mobile-row {
+            order: 0;
+        }
+    }
+}
+.office-item {
+    display: flex;
+    justify-content: space-between;
+    border: 10px solid rgb(198, 196, 196);
+    margin-bottom: 2rem;
+    @include mobile-row {
+        flex-direction: column;
+    }
+    img {
+        object-fit: contain;
+        width: 60%;
+        @include mobile-row {
+            width: 100%;
+        }
+    }
+    .intro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mobile-row {
+            padding: 1rem 0;
+        }
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .office-text {
+            font-size: 1.2rem;
+            width: 70%;
+            @include pad {
+                font-size: 1rem;
+                font-weight: 500;
+            }
+        }
+    }
+}
