@@ -73,4 +73,11 @@ $(document).ready(function () {
         }, 1500);
     });
 
+
+
+    $('.registration h2').addClass('plusIcon');
+    $('.registration h2').click(function () { 
+        $(this).next().slideToggle(1000);
+        $(this).toggleClass('plusIcon minusIcon');
+    });
 });

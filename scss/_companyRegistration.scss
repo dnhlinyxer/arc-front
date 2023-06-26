@@ -1,0 +1,66 @@
+.company-registration {
+    padding: 100px 0 150px;
+}
+.companyRegistration-container {
+    @include container;
+    @include pad {
+        padding: 0 1.5rem;
+    }
+    .registration {
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: 2rem 0;
+            color: #fff;
+            background-color: #000;
+            @include pad {
+                font-size: 2rem;
+                padding: 1.5rem 0;
+            }
+            @include mobile-row {
+                font-size: 1.7rem;
+                padding: 1rem 0;
+            }
+        }
+        h2 {
+            // text-align: center;
+            font-size: 2.5rem;
+            padding: 0.7rem 0;
+            margin: 1rem 0 0 0;
+            background-color: #b0b0b0;
+            padding-left: 50px;
+            cursor: pointer;
+            @include pad {
+                font-size: 2rem;
+            }
+            @include mobile-row {
+                font-size: 1.7rem;
+            }
+        }
+    }
+}
+.flow-chart {
+    display: flex;
+    flex-wrap: nowrap;
+    border: 2px solid #b0b0b0;
+    @include mobile-row {
+        flex-direction: column;
+    }
+    img {
+        width: 50%;
+        object-fit: contain;
+        @include mobile-row {
+            width: 100%;
+        }
+    }
+}
+.plusIcon {
+    background-image: url(../img/plus-sign.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+.minusIcon {
+    background-image: url(../img/minus.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
