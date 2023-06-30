@@ -6,13 +6,13 @@
 
 /* navbar start */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.88);
+    background-color: rgba(25, 25, 25, 0.9);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 3px 3px 0px rgba(37, 36, 36, 0.88);
 }
 .nav-container {
     @include container;
@@ -45,7 +45,7 @@
         top: 60px;
         right: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, 0.88);
+        background-color: rgba(25, 25, 25, 0.9);
         // hamburger-menu
         max-height: 0px;
         overflow: hidden;
@@ -61,10 +61,10 @@
             font-size: 1.45rem;
             font-weight: 700;
             position: relative;
-            transform: translateY(0);
+            // transform: translateY(0);
             transition: .3s;
             &:hover {
-                transform: translateY(-3px);
+                // transform: translateY(-3px);
                 &::after {
                     left: 0;
                     right: 0;
@@ -95,11 +95,12 @@
     display: none;
     position: absolute;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.88);
-    box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.8);
+    background-color: rgba(25, 25, 25, 0.9);
+    box-shadow: 0 3px 3px 0px rgba(37, 36, 36, 0.88);
     @include mobile-row {
         width: 40%;
         margin: 0 auto;
+        background-color: transparent;
     }
     li {
         text-align: left;
@@ -116,7 +117,7 @@
             border-bottom: 2px dotted #fff;
             &:hover {
                 background-color: #fff;
-                color: rgba(0, 0, 0, 0.88);
+                color: rgba(25, 25, 25, 0.9);
             }
         }
     }
@@ -167,7 +168,7 @@
 
 /* footer start */
 .footer {
-    background-color: #000;
+    background-color: #2f2e2e;
     .footer-container {
         @include container;
         color: #fff;
@@ -240,7 +241,7 @@
 /* totop start */
 .totop {
     border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(47, 46, 46, 0.75);
     position: fixed;
     bottom: 11%;
     right: 2%;
